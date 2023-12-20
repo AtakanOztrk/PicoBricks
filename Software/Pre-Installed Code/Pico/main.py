@@ -12,7 +12,7 @@ NOTE_DURATION = 0.11
 ir_data = 0
 data_rcvd = False
 
-i2c = I2C(0, scl=Pin(5), sda=Pin(4), freq=200000)   # Init I2C using pins
+i2c = I2C(0, scl=Pin(5), sda=Pin(4))   # Init I2C using pins
 oled = SSD1306_I2C(WIDTH, HEIGHT, i2c, addr=0x3c)   # Init oled display
 fb1 = framebuf.FrameBuffer(Picobricks_img, 128,64 , framebuf.MONO_HLSB) # Creating framebuffer for PicoBricks Logo
 fb2 = framebuf.FrameBuffer(Note_img, 128,64, framebuf.MONO_HLSB)        # Creating framebuffer for music note
